@@ -1,0 +1,90 @@
+
+
+
+
+<div class="box-form-login">
+
+
+
+
+  <!-- Example Code -->
+
+  <div class="container">
+    <div class="row row-cols-2">
+      <div class="col-6">
+        <div class="p-3">
+          <!-- Thêm đoạn mã HTML để hiển thị chữ muỗi -->
+          <div class="box-show-text-id">
+            <p id="show-text-id">Đăng kí tài khoản </p>
+          </div>
+          <img class="login-img" src="login.gif" alt="imglogin">
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="p-3 text-input-center">
+
+          <div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email</label>
+              <input type="email" class="form-control"
+                id="singin-exampleInputEmail"
+                aria-describedby="emailHelp">
+              <div id="singin-email-err" class="form-text hiden-text-input"></div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Name</label>
+              <input type="text" class="form-control"
+                id="singin-exampleInputName">
+              <div id="singin-name-err" class="form-text hiden-text-input"></div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control"
+                id="singin-exampleInputPassword1">
+            </div>
+            <div id="singin-pass1-err" class="form-text hiden-text-input"></div>
+            <div class="mb-3">
+              <label for="exampleInputPassword2" class="form-label">Password</label>
+              <input type="password" class="form-control"
+                id="singin-exampleInputPassword2">
+            </div>
+            <div id="singin-pass2-err" class="form-text hiden-text-input"></div>
+            <br/>
+              <button type="submit" id="bnt-singin" class="btn btn-primary">Đăng
+                kí</button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- End Example Code -->
+    <!-- Vertically centered modal -->
+    <div class="modal fade" id="singin-exampleModal" tabindex="-1"
+      aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Đăng kí </h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id="modal-body">
+            Đăng kí thành công
+          </div>
+          <div class="modal-footer">
+
+            <button id="bnt-nextlogin" type="button" class="btn btn-primary"
+              data-bs-dismiss="modal">Close</button>
+            <button id="bnt-nextlogin-fail" type="button" class="btn
+              btn-primary"
+              data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Example Code -->
+
+  </div>

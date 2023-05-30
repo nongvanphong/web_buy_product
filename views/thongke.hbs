@@ -1,0 +1,97 @@
+
+<div class="text-center"> <b style="font-size:32px">Bảng thống kế số lượng người
+    dùng</b></div>
+
+{{!-- // khai bảo thư viện , trực tiếp bên trong html --}}
+
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+<canvas id="lineChart"></canvas>
+<script>
+
+ const data1= [0,0,0,0,0,0,0,0,0,0,0,0];
+const data2= [0,0,0,0,0,0,0,0,0,0,0,0];
+
+getdatathongke=async()=>{
+   
+
+const xhr = new XMLHttpRequest();
+  xhr.open("POST", "http://localhost:3000/api/thongke");
+  xhr.setRequestHeader("Content-Type", "application/json");
+  xhr.onload = () => {
+    if (xhr.status === 200) {
+   let Listdata = JSON.parse(xhr.responseText);
+   let i=0;
+    Listdata.map(item=>{
+    if(item._id.year===2023)  {
+        
+        data2[(item._id.month-1)]=item.count;
+    } else if(item._id.year==2022){
+        data1[(item._id.month-1)]=item.count;
+    }
+    
+        
+        bieudo();
+    })
+     
+    } else if (xhr.status === 500) {
+    } else {
+      console.error(xhr.statusText);
+    }
+  };
+  xhr.onerror = () => {
+    console.error("Request failed");
+  };
+  xhr.send();
+
+
+
+
+}
+
+
+getdatathongke();
+
+
+
+
+
+
+const bieudo=()=>{
+    //line
+var ctxL = document.getElementById("lineChart").getContext('2d');
+var myLineChart = new Chart(ctxL, {
+  type: 'line',
+  data: {
+    labels: ["Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6", "Tháng 7", "Tháng 8", "Tháng 9", "Tháng 10", "Tháng 11", "Tháng 12"],
+    datasets: [{
+      label: "Năm 2022",
+      data: data1,
+      backgroundColor: [
+        'rgba(217, 95, 132, .2)',
+      ],
+      borderColor: [
+        'rgba(200, 99, 132, .7)',
+      ],
+      borderWidth: 2
+    },
+    {
+      label: "Năm 2023",
+      data: data2,
+      backgroundColor: [
+        'rgba(124, 252, 0, 1) ',
+      ],
+      borderColor: [
+        'rgba(0, 10, 130, .7)',
+      ],
+      borderWidth: 2
+    }
+    ]
+  },
+  options: {
+    responsive: true
+  }
+});
+}
+
+</script>

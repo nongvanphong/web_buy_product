@@ -1,0 +1,47 @@
+.col-right{
+   margin-top: 30px;
+}
+.delete-product{
+width: "100%";
+
+justify-content: center;
+
+display: flex;
+}
+
+/* //style chọn ảnh */
+.get-img{
+   
+  
+  
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.choos-img{
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    border: 1px solid rgb(99, 99, 99);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.show-img-choos{
+   font-size: 1rem;
+   width: 100px;
+   height: 100px;
+   border-radius: 5px;
+}
+.hide-bnt-notifications{
+    display: none;
+}
+.custom-add-update-product{
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-top:90px;
+    height:90vh;
+    overflow: auto;
+}

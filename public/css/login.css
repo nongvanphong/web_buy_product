@@ -1,0 +1,57 @@
+/* Định dạng chữ để hiển thị lần lượt */
+.your-text-class {
+    display: inline-block;
+    animation-name: typing;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  
+  /* Tạo animation cho hiệu ứng gõ từng chữ */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+
+.box-form-login{
+    display:flex;
+ 
+    height: 100vh;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+   
+}
+.login-img{
+    width: 100%;
+    height: 100%;
+}
+.box-show-text-id{
+    min-height:50px ;
+    width: "100%";
+  
+  
+}
+#show-text-id{
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+   
+}
+
+.text-input-center{
+  align-items:
+  center;justify-content: center; display: flex;
+}
+.hiden-text-input{
+  display: none;
+}
+
+#bnt-nextlogin,.bnt-login-success{
+display: none;
+}

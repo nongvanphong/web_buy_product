@@ -1,0 +1,293 @@
+ <div class="row g-2">
+    <div class="col-8 col-left">
+        {{!-- list pro duct --}}
+        <div class="row row-cols-xl-3 row-cols-lg-3 row-cols-md-2 row-cols-sm-1"
+            id="product-list">
+
+        </div>
+
+    </div>
+
+
+    <div class="col-4 col-right custom-add-update-product ">
+        <div class="p-3">
+            <p>
+                <button class="btn btn-primary" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseExample"
+                    aria-expanded="false"
+                    aria-controls="collapseExample">
+                    Add product
+                </button>
+            </p>
+            <div class="collapse" id="collapseExample">
+
+                <div class="card card-body">
+                    <div class="get-img">
+                        <div>
+                            <div class="choos-img">
+
+                                <div id="preview">
+                                    <img class="show-img-choos"
+                                        id="image-preview"
+                                        src=""
+                                        alt="Ảnh
+                                        xem
+                                        trước">
+                                </div>
+                            </div>
+                            <br/>
+                                <input type="file" id="file"
+                                    name="file1" multiple>
+                            </div>
+                        </div>
+
+                        <br/>
+                            <div class="mb-3 row">
+                                <label for="inputPassword"
+                                    class="col-sm-4
+                                    col-form-label">Name</label>
+                                <div class="col-sm-8">
+                                    <input type="text"
+                                        class="form-control"
+                                        id="input-name-product"
+                                        name="nameproduct">
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <div class="col-6">
+                                    Chọn danh mục
+                                </div>
+                                <div class="col-6">
+                                    <select
+                                        name="typeproduct"
+                                        id="input-type-product"
+                                        class="form-select
+                                        form-select-sm"
+                                        aria-label=".form-select-sm
+                                        example">
+                                        <option value="Danh mục"
+                                            selected>Danh
+                                            mục</option>
+                                        <option value="Điện tử">Điện tử</option>
+                                        <option value="Gia dụng">Gia
+                                            dụng</option>
+                                        <option value="Thời trang">Thời
+                                            trang</option>
+                                        <option value="Cá nhân">Cá nhân</option>
+                                        <option value="Khác">Khác</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label for="inputPassword"
+                                    class="col-sm-4
+                                    col-form-label">Price</label>
+                                <div class="col-sm-8">
+                                    <input name="priceproduct"
+                                        type="number"
+                                        class="form-control"
+                                        id="input-price-product">
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label for="inputPassword"
+                                    class="col-sm-4
+                                    col-form-label">Number</label>
+                                <div class="col-sm-8">
+                                    <input name="numberproduct"
+                                        type="number"
+                                        class="form-control"
+                                        id="input-number-product">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlTextarea1"
+                                    class="form-label">Descride product</label>
+                                <textarea name="describeproduct"
+                                    class="form-control"
+                                    id="input-descride-product"
+                                    rows="3"></textarea>
+                            </div>
+
+                            <button
+                                id="add-product"
+                                data-bs-toggle="collapse"
+                                {{!-- data-bs-target="#collapseExample"
+                                --}}
+                                class="btn btn-success">Add</button>
+                        </div>
+                    </div>
+                    <div class="collapse" id="collapseExampleupdate">
+                        <div class="card card-body">
+                            <div class="get-img">
+                                <div>
+                                    <div class="choos-img">
+
+                                        <div id="preview">
+                                            <img class="show-img-choos"
+                                                id="image-preview1"
+                                                src=""
+                                                alt="Ảnh
+                                                xem
+                                                trước">
+                                        </div>
+                                    </div>
+                                    <br/>
+                                        <input type="file" id="file1"
+                                            name="file2" multiple>
+                                    </div>
+                                </div>
+                                <br/>
+                                    <input
+                                        name="idproductupdate"
+                                        type="text"
+                                        class="form-control"
+                                        id="input-id-product-update"
+                                        style="display: none">
+                                    <div class="mb-3 row">
+                                        <label for="inputPassword"
+                                            class="col-sm-4
+                                            col-form-label">Name</label>
+                                        <div class="col-sm-8">
+                                            <input
+                                                name="nameproductupdate"
+                                                type="text"
+                                                class="form-control"
+                                                id="input-name-product-update">
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 row">
+                                        <div class="col-6">
+                                            Chọn danh mục
+                                        </div>
+                                        <div class="col-6">
+                                            <select
+                                                name="typeproductupdate"
+                                                id="input-type-product-update"
+                                                class="form-select
+                                                form-select-sm"
+                                                aria-label=".form-select-sm
+                                                example">
+                                                <option value="Danh mục"
+                                                    selected>Danh
+                                                    mục</option>
+                                                <option value="Điện tử">Điện tử</option>
+                                                <option value="Gia dụng">Gia
+                                                    dụng</option>
+                                                <option value="Thời trang">Thời
+                                                    trang</option>
+                                                <option value="Cá nhân">Cá nhân</option>
+                                                <option value="Khác">Khác</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 row">
+                                        <label for="inputPassword"
+                                            class="col-sm-4
+                                            col-form-label">Price</label>
+                                        <div class="col-sm-8">
+                                            <input
+                                                name="priceproductupdate"
+                                                type="number"
+                                                class="form-control"
+                                                id="input-price-product-update">
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 row">
+                                        <label for="inputPassword"
+                                            class="col-sm-4
+                                            col-form-label">Number</label>
+                                        <div class="col-sm-8">
+                                            <input
+                                                name="numberproductupdate"
+                                                type="number"
+                                                class="form-control"
+                                                id="input-number-product-update">
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label
+                                            for="exampleFormControlTextarea1"
+                                            class="form-label">Example
+                                            textarea</label>
+                                        <textarea
+                                            name="desritionproductupdate"
+                                            class="form-control"
+                                            id="input-desrition-product-update"
+                                            rows="3"></textarea>
+                                    </div>
+
+                                    <button
+
+
+                                        id="update-products"
+                                        class="btn
+                                        btn-warning">Update</button>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <!-- Vertically alaer thông báo -->
+                <div class="modal fade" id="presion-exampleModal"
+                    tabindex="-1"
+                    data-bs-backdrop="static"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5"
+                                    id="exampleModalLabel">Cảnh báo</h1>
+                                <button type="button" class="btn-close"
+                                    data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body"
+                                id="notification-delete-product">
+
+                            </div>
+                            <div class="modal-footer">
+                                <input
+                                    style="display: none"
+
+                                    type="text"
+                                    class="form-control"
+                                    id="id-delete-xxx">
+
+                                <button
+                                    id="showbntdelete"
+                                    onclick="deleteProductApi()"
+                                    class="btn
+                                    btn-outline-danger hide-bnt-notifications">xóa</button>
+                                <button
+                                    id="showbntxacnhan"
+                                    aria-label="Close"
+                                    data-bs-dismiss="modal"
+                                    class="btn
+                                    btn-outline-danger hide-bnt-notifications">close</button>
+                                <button
+                                    id="showbntxacnhanupdate"
+                                    aria-label="Close"
+                                    data-bs-dismiss="modal"
+                                    class="btn
+                                    btn-outline-warning hide-bnt-notifications">close</button>
+                                <button
+                                    id="showbntxacnhanadd"
+                                    aria-label="Close"
+                                    data-bs-dismiss="modal"
+                                    class="btn
+                                    btn-outline-success hide-bnt-notifications">close</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- End Example Code -->

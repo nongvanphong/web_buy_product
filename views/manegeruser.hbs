@@ -1,0 +1,81 @@
+ <!-- Example Code -->
+
+<div class="container text-center">
+    {{!-- <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 "
+        id="list-user">
+    </div> --}}
+
+
+    <section style="background-color: #eee;">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center
+                align-items-center h-100">
+                <div class="col-md-12 col-xl-10">
+
+                    <div class="card">
+                        <div class="text-center pt-3 pb-2">
+                            <img
+                                src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-todo-list/check1.webp"
+                                alt="Check" width="60">
+                            <h2 class="my-4">Quản lí user</h2>
+                        </div>
+                        <div class="card-body"
+                            data-mdb-perfect-scrollbar="true"
+                            style="position: relative;">
+                            <table class="table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">User</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Premisstion</th>
+                                        <th scope="col">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="list-user">
+
+
+
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+<!-- End Example Code -->
+
+<!-- Vertically centered modal -->
+<div class="modal fade" id="manager-exampleModal" tabindex="-1"
+    aria-labelledby="exampleModalLabel" aria-hidden="true"
+    data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Quản lí
+                    người dùng</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="manager-modal-body">
+
+            </div>
+            <div class="modal-footer">
+
+                <button id="bnt-manager" onclick="changePremissionUser()"
+                    type="button" class="btn
+                    btn-primary"
+                    data-bs-dismiss="modal">Có</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Example Code -->
